@@ -1,0 +1,166 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetDelight — Cute Cake Shop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="#">SweetDelight ✿</a>
+        <button class="nav-toggle">☰</button>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#favorit">Favorit</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>SweetDelight ✦</h1>
+          <p>Toko kue pastel paling lucu di Bandung! Fresh, lembut, dan manis seperti hari kamu ♡</p>
+          <p><button class="btn" id="showProdukBtn">Lihat Produk</button></p>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero.webp" alt="kuewarnapastel">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="features hidden">
+      <div class="container">
+        <h2>Produk Cute Kami 🎀</h2>
+        <div class="features-row">
+          <article class="feature">
+            <h3>Berry Pink Cake</h3>
+            <p>Kue pink lembut dengan strawberry segar di atasnya. Super lucu!</p>
+          </article>
+          <article class="feature">
+            <h3>Pastel Cupcake</h3>
+            <p>Cupcake warna pastel dengan topping sprinkles imut.</p>
+          </article>
+          <article class="feature">
+            <h3>Bunny Macaron</h3>
+            <p>Macaron bentuk kelinci warna-warni yang manis banget ♡</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAVORIT -->
+    <section id="favorit" class="features alt">
+      <div class="container">
+        <h2>Menu Favorit Pelanggan ✧</h2>
+        <div class="features-row">
+          <article class="feature">
+            <h3>Dreamy Cheesecake</h3>
+            <p>Cheesecake creamy dengan dekorasi pastel.</p>
+          </article>
+          <article class="feature">
+            <h3>Cloud Donuts</h3>
+            <p>Donat empuk seperti awan, tabur gula halus pastel.</p>
+          </article>
+          <article class="feature">
+            <h3>Heart Cookies</h3>
+            <p>Cookies bentuk hati untuk kasih sayang lebih ♡</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Galeri Pastel ✿</h2>
+        <div class="gallery-grid">
+          <figure><img src="images/cutecake.jpg" alt=""><figcaption>Cute Cake</figcaption></figure>
+          <figure><img src="images/pinkcupcake.jpeg" alt=""><figcaption>Pink Cupcake</figcaption></figure>
+          <figure><img src="images/macaron.jpg" alt=""><figcaption>Macaron</figcaption></figure>
+          <figure><img src="images/dessert.jpg" alt=""><figcaption>Dessert</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Kontak Kami ♡</h2>
+          <p>Mau order custom cake lucu? Kirim pesan di sini yaa ✿</p>
+        </div>
+        <form class="contact-form" onsubmit="alert('Pesan terkirim! (demo)'); return false;">
+          <label for="name">Nama</label>
+          <input id="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+
+          <label for="message">Pesan</label>
+          <textarea id="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn">Kirim</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>SweetDelight ✿</h3>
+        <p>Kue pastel lucu & fresh setiap hari.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p>Nama: Milla Agustin</p>
+        <p>NIM: L0324020</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Show produk
+  const showBtn = document.getElementById('showProdukBtn');
+  const produkSection = document.getElementById('produk');
+
+  showBtn.addEventListener('click', () => {
+    produkSection.classList.remove('hidden');
+    window.location.href = '#produk';
+  });
+</script>
+
+</body>
+</html>
+```
